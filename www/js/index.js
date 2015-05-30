@@ -48,17 +48,16 @@ document.getElementById('btnCalculate').addEventListener('click', this.onCalcula
         console.log('Received Event: ' + id);
     },
 onCalculate: function() {
-var b = document.getElementById('leng').value;
-var h = document.getElementById('bred').value;
-if (b.length == 0 || h.length == 0)
-document.getElementById('res').innerHTML = "ERROR: Please fill all the fields.";
-else if (b == 0 || h == 0)
-document.getElementById('res').innerHTML = "ERROR: Please enter valid values.";
+var b = document.getElementById('cel').value;
+if (b.length == 0)
+document.getElementById('res').innerHTML = "ERROR: Please enter a value";
 else {
 var x = parseInt(b);
-var y = parseInt(h);
-var area = x * y;
-document.getElementById('res').innerHTML = "Area = " + area;
+var y=x*9;
+var z=y/5;
+var temp=z+32;
+
+document.getElementById('far').innerHTML = temp;
 }
 }
 };
